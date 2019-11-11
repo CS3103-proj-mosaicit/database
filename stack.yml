@@ -1,0 +1,13 @@
+# Use root/3103 as user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 3103
+    ports:
+      - 3306:3306 # change this to 3306:xxxxx
